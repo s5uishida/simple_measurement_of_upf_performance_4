@@ -118,7 +118,7 @@ The network interfaces of each VM except VM-UP are as follows.
 | | ens20 | VirtIO | vmbr3 | 192.168.13.131/24 | N3 |
 
 **The network interfaces of each VM-UP(UPFs) are as follows.**
-**Note that UPFs from `a` to `d` connect to Open5GS CN, but `e` free5GC UPF does not support FTUP flag in PFCP Association Setup Request/Respose, so it connects to free5GC CN.**
+**Note that UPFs from `a` to `c` connect to Open5GS CN, but `d` free5GC UPF does not support FTUP flag in PFCP Association Setup Request/Respose, so it connects to free5GC CN.**
 | # | SW | Device | Model | Linux Bridge | IP address | Interface |
 | --- | --- | --- | --- | --- | --- | --- |
 | a | Open5GS UPF | ~~ens18~~ | ~~VirtIO~~ | ~~vmbr1~~ | ~~10.0.0.151/24~~ | ~~(NAPT NW)~~ ***down*** |
