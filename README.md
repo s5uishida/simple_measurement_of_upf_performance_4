@@ -892,13 +892,14 @@ First, run PacketRusher to establish a connection that will be used to measure p
 
 ### Run PacketRusher on VM2
 
-In gtp5g v0.8.7 and later, GTP-U Sequence Number is enabled by default. In this case, eUPF will probably not be able to process GTP-U packets correctly. Therefore, if connecting to eUPF, please disable GTP-U Sequence Number of gtp5g used by PacketRusher as follows.
+In gtp5g v0.8.7 and later, GTP-U Sequence Number is enabled by default. In this case, eUPF will probably not be able to process GTP-U packets correctly due to a bug in gtp5g. Therefore, if connecting to eUPF, please disable GTP-U Sequence Number of gtp5g used by PacketRusher as follows.
    
 ```
 # echo 0 > /proc/gtp5g/seq
 ```
-Also, UPF performance measurements using iperf3 tended to be better when GTP-U Sequence Number was disabled. (e.g. UPG-VPP)  
 This measurement will be performed with the GTP-U Sequence Number disabled.
+
+**Additional Information. [This](https://github.com/free5gc/gtp5g/commit/5c04e67c76840c6cde0001798159e9acc79aa555) has fixed the bug in gtp5g.**
 
 Establish a connection for one UE.
 
